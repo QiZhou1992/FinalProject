@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @public_album.Name %>
+</p>
+
+<p>
+  <strong>Followcount:</strong>
+  <%= @public_album.FollowCount %>
+</p>
+
+<%= link_to 'Edit', edit_public_album_path(@public_album) %> |
+<%= link_to 'Back', public_albums_path %>

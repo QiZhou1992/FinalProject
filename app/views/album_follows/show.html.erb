@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Albumid:</strong>
+  <%= @album_follow.AlbumID %>
+</p>
+
+<p>
+  <strong>Followerid:</strong>
+  <%= @album_follow.FollowerID %>
+</p>
+
+<%= link_to 'Edit', edit_album_follow_path(@album_follow) %> |
+<%= link_to 'Back', album_follows_path %>

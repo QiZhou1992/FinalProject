@@ -1,0 +1,29 @@
+<h1>Listing album_follows</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Albumid</th>
+      <th>Followerid</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @album_follows.each do |album_follow| %>
+      <tr>
+        <td><%= album_follow.AlbumID %></td>
+        <td><%= album_follow.FollowerID %></td>
+        <td><%= link_to 'Show', album_follow %></td>
+        <td><%= link_to 'Edit', edit_album_follow_path(album_follow) %></td>
+        <td><%= link_to 'Destroy', album_follow, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Album follow', new_album_follow_path %>

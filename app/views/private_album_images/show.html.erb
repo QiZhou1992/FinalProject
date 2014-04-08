@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Imageid:</strong>
+  <%= @private_album_image.ImageID %>
+</p>
+
+<p>
+  <strong>Albumid:</strong>
+  <%= @private_album_image.AlbumID %>
+</p>
+
+<%= link_to 'Edit', edit_private_album_image_path(@private_album_image) %> |
+<%= link_to 'Back', private_album_images_path %>

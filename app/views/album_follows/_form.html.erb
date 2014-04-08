@@ -1,0 +1,25 @@
+<%= form_for(@album_follow) do |f| %>
+  <% if @album_follow.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@album_follow.errors.count, "error") %> prohibited this album_follow from being saved:</h2>
+
+      <ul>
+      <% @album_follow.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :AlbumID %><br>
+    <%= f.number_field :AlbumID %>
+  </div>
+  <div class="field">
+    <%= f.label :FollowerID %><br>
+    <%= f.number_field :FollowerID %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

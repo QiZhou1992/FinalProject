@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @private_album.Name %>
+</p>
+
+<p>
+  <strong>Userid:</strong>
+  <%= @private_album.UserID %>
+</p>
+
+<%= link_to 'Edit', edit_private_album_path(@private_album) %> |
+<%= link_to 'Back', private_albums_path %>

@@ -1,0 +1,29 @@
+<h1>Listing private_albums</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Userid</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @private_albums.each do |private_album| %>
+      <tr>
+        <td><%= private_album.Name %></td>
+        <td><%= private_album.UserID %></td>
+        <td><%= link_to 'Show', private_album %></td>
+        <td><%= link_to 'Edit', edit_private_album_path(private_album) %></td>
+        <td><%= link_to 'Destroy', private_album, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Private album', new_private_album_path %>

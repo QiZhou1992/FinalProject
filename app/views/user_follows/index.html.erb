@@ -1,0 +1,29 @@
+<h1>Listing user_follows</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Userid</th>
+      <th>Followerid</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_follows.each do |user_follow| %>
+      <tr>
+        <td><%= user_follow.UserID %></td>
+        <td><%= user_follow.FollowerID %></td>
+        <td><%= link_to 'Show', user_follow %></td>
+        <td><%= link_to 'Edit', edit_user_follow_path(user_follow) %></td>
+        <td><%= link_to 'Destroy', user_follow, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User follow', new_user_follow_path %>

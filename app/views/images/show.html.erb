@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Path:</strong>
+  <%= @image.Path %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @image.Author %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @image.Status %>
+</p>
+
+<p>
+  <strong>Likedcount:</strong>
+  <%= @image.LikedCount %>
+</p>
+
+<%= link_to 'Edit', edit_image_path(@image) %> |
+<%= link_to 'Back', images_path %>

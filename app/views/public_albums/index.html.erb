@@ -1,0 +1,29 @@
+<h1>Listing public_albums</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Followcount</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @public_albums.each do |public_album| %>
+      <tr>
+        <td><%= public_album.Name %></td>
+        <td><%= public_album.FollowCount %></td>
+        <td><%= link_to 'Show', public_album %></td>
+        <td><%= link_to 'Edit', edit_public_album_path(public_album) %></td>
+        <td><%= link_to 'Destroy', public_album, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Public album', new_public_album_path %>

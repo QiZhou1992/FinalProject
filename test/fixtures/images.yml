@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Path: MyString
+  Author: 1
+  Status: MyString
+  LikedCount: 1
+
+two:
+  Path: MyString
+  Author: 1
+  Status: MyString
+  LikedCount: 1

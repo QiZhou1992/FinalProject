@@ -1,0 +1,2 @@
+module PrivateAlbumImagesHelper
+end
