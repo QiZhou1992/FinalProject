@@ -14,7 +14,16 @@ class ImagesController < ApplicationController
 
   # GET /images/new
   def new
+    # Create image entry
     @image = Image.new
+    
+    # Set image attributes
+    @image.Author = image[:author]
+    @image.Status = "private"
+    @image.LikedCount = 0
+    @image.created = Time.Now
+    @image.updated = Time.Now
+    
   end
 
   # GET /images/1/edit
@@ -39,11 +48,11 @@ class ImagesController < ApplicationController
 
   #Alternate creation function
   def upload
-    @image = Image.new(params[:Image])
+      @image = Image.new(params[:image])
 
     respond_to do |format|
       if @image.save
-        format.html { redirect_to @image, notice: 'Image was successfully uploaded.' }
+        format.html { redirect_to @image, notice: 'Image was successfully uploaded!' }
       else
         format.html { render action: 'upload',notice:"Uh-oh! We couldn't upload the image, please try again!" }
       end
